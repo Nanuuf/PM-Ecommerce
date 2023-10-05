@@ -4,7 +4,7 @@ import { Menu, MenuButton, MenuList, MenuItem, Flex, Box, Spacer } from '@chakra
 
 const Navbar = () => {
     return (
-        <div>
+        <div className='estiloNav'>
             <Flex>
                 <Box >
                     <h1>PM</h1>
@@ -12,13 +12,13 @@ const Navbar = () => {
                 <Spacer />
                 <Box>
                     <Menu>
-                        <MenuButton>
+                        <MenuButton >
                             Productos
                         </MenuButton>
-                        <MenuList>
-                            <MenuItem>Spray hauricos</MenuItem>
-                            <MenuItem>Sahumos</MenuItem>
-                            <MenuItem>Sahumerios</MenuItem>
+                        <MenuList bg="purple.500">
+                            <MenuItem bg="purple.500">Spray hauricos</MenuItem>
+                            <MenuItem bg="purple.500">Sahumos</MenuItem>
+                            <MenuItem bg="purple.500">Sahumerios</MenuItem>
                         </MenuList>
                     </Menu>
                 </Box>

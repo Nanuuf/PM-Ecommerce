@@ -1,8 +1,7 @@
-# React + Vite
+# Proyecto de React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Cual es la idea?
+crear un e-commerce para una tienda holistica, se podrá agregar productos, comprar o eliminar lo seleccionado.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Usos: 
+Uso de [Chakra UI](https://chakra-ui.com/) e iconos de [font awesome](https://fontawesome.com/) 
