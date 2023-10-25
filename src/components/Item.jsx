@@ -2,7 +2,7 @@ import React from 'react'
 import {Card, CardBody, Stack, Heading, Divider, CardFooter, ButtonGroup, Button } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
-const Item = ({name, id}) => {
+const Item = ({id, prodNombre}) => {
 
     
     return (
@@ -12,7 +12,7 @@ const Item = ({name, id}) => {
                     
                     <Stack mt='6' spacing='3'>
                         <p>Imagen</p>
-                        <Heading size='md'> {name} </Heading>
+                        <Heading size='md'> {prodNombre} </Heading>
                         
                         
                     </Stack>

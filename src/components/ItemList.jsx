@@ -1,19 +1,19 @@
 import React from 'react'
 import Item from './Item'
 
+
 const ItemList = ({productos}) => {
-    console.log(productos)
     return (
-        <div>
+        <div className="item-list-container" >
             {
                 productos.map((p) => {
                     return(
                         <Item
                             key={p.id}
                             id={p.id}
-                            name= {p.name}
-                            descripcion= {p.descripcion}
-                            price= {p.price}
+                            prodNombre= {p.prodNombre}
+                            detalle= {p.detalle}
+                            precio= {p.precio}
                         />
                     )
                 })

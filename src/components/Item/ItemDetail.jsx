@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Card, CardBody, Stack, Text, Heading, Divider, CardFooter, ButtonGroup, Button } from '@chakra-ui/react';
+import productos from '../Dataproductos'
 
-const ItemDetail = ({ productos }) => {
+const ItemDetail = () => {
     const { id } = useParams();
     const [contador, setContador] = useState(0);
 
-    const filterProducts = productos.filter((producto) => producto.id === id);
+    const filteredProduct= productos.find((producto) => producto.id === parseInt(id));
 
     const handleIncrement = () => {
         if (contador < 10) {
@@ -26,17 +27,16 @@ const ItemDetail = ({ productos }) => {
 
     return (
         <>
-        {filterProducts.map((p) => {
-            return (
+        {filteredProduct && (
             <Card maxW='sm'>
                 <CardBody>
                 <Stack mt='6' spacing='3'>
                     <p>Imagen</p>
-                    <Heading size='md'>{p.name}</Heading>
+                    <Heading size='md'>{filteredProduct.prodNombre}</Heading>
                 </Stack>
                 </CardBody>
-                <Text>{p.descripcion}</Text>
-                <Text>${p.price}</Text>
+                <Text>{filteredProduct.detalle}</Text>
+                <Text>${filteredProduct.precio}</Text>
                 <Divider />
                 <CardFooter>
                 <ButtonGroup spacing='2'>
@@ -50,8 +50,7 @@ const ItemDetail = ({ productos }) => {
                 </ButtonGroup>
                 </CardFooter>
             </Card>
-            );
-        })}
+        )}
         </>
     );
 };
