@@ -1,19 +1,37 @@
 import React from 'react'
 import ItemList from './ItemList'
-import productos from './Dataproductos'
 import './ItemListC.css'
+import { useState, useEffect } from 'react';
+import {collection, getDocs, getFirestore, query, where} from 'firebase/firestore'
+import { useParams } from 'react-router-dom';
 
 
-const ItemListContainer = ({category}) => {
+const ItemListContainer = ({greeting}) => {
+
+    const [productos, setProductos] = useState([])
+    const { category } = useParams()
+
+    useEffect(() => {
+        const getProducts = async () => {
+            const db = getFirestore()
+            const ItemsCollection = collection(db, "holistico")
+            const snapshot = await getDocs(ItemsCollection)
+            const docs = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+                
+            const filteredProducts = category ? docs.filter((p) => p.categoria === category) : docs
+                
+            setProductos(filteredProducts)
+        }
     
-    const filteredProductos = category
-    ? productos.filter((producto) => producto.categoria === category)
-    : productos;
+        getProducts()
+    }, [category])
 
+
+    
     return (
         <div>
-            <h1>Productos</h1>
-            <ItemList productos={filteredProductos} />
+            <h1>{greeting}</h1>
+            <ItemList productos={productos} />
         </div>
     );
 };
