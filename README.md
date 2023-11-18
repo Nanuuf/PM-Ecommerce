@@ -1,11 +1,12 @@
 # Proyecto de React
 
-## Cual es la idea?
-crear un e-commerce para una tienda holistica, se podrá agregar productos, comprar o eliminar lo seleccionado.
+## Proyecto
+e-commerce para una tienda holistica, en esta se puede comprar, agregar y eliminar los productos que se deseen asi mismo como finalizar la compra. 
 
 ### Usos: 
-Uso de [Chakra UI](https://chakra-ui.com/) e iconos de [font awesome](https://fontawesome.com/) 
+⋅⋅* Página creada con React Native
+⋅⋅* Framework usado [Chakra UI](https://chakra-ui.com/) e iconos de [font awesome](https://fontawesome.com/) 
+⋅⋅* alert para el usuario [sweetalert2]([https://chakra-ui.com/](https://sweetalert2.github.io/)) 
 
-### Demostración de la página: 
-
-![PM-E-commerce-Google-Chrome-2023-10-25-13-16-41](https://github.com/Nanuuf/PM-Ecommerce/assets/128434671/a224b877-df75-41ee-a228-177efdea1f89)
+### Muestra de la pagina:
+[Muestra](./public/PM-E-commerce-Google-Chrome-2023-11-17-21-25-14.gif)
